@@ -1,8 +1,8 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import Header from './Header';
-import Footer from './Footer';
-import FeaturedProductGrid from './FeaturedProductGrid';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import FeaturedProductGrid from '../components/FeaturedProductGrid';
 import { GET_FEATURED_PRODUCTS } from './path/to/GET_FEATURED_PRODUCTS';
 
 function WelcomePage() {
