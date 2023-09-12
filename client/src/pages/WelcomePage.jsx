@@ -3,31 +3,31 @@ import { useQuery } from '@apollo/client';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FeaturedProductGrid from '../components/FeaturedProductGrid';
-// import { GET_FEATURED_PRODUCTS } from './path/to/GET_FEATURED_PRODUCTS';
+import { GET_FEATURED_PRODUCTS } from './path/to/GET_FEATURED_PRODUCTS';
 
-// function WelcomePage() {
-//   const { loading, error, data } = useQuery(GET_FEATURED_PRODUCTS);
+function WelcomePage() {
+  const { loading, error, data } = useQuery(GET_FEATURED_PRODUCTS);
 
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
-//   const featuredProducts = data.featuredProducts;
+  const featuredProducts = data.featuredProducts;
 
-//   return (
-//     <div className="welcome-page">
-//       <Header />
+  return (
+    <div className="welcome-page">
+      <Header />
 
-//       {/* Featured Shoe Products Section */}
-//       <section className="featured-products">
-//         <h2>Featured Shoe Products</h2>
+      {/* Featured Shoe Products Section */}
+      <section className="featured-products">
+        <h2>Featured Shoe Products</h2>
 
-//         {/* Use the FeaturedProductGrid component */}
-//         <FeaturedProductGrid featuredProducts={featuredProducts} />
-//       </section>
+        {/* Use the FeaturedProductGrid component */}
+        <FeaturedProductGrid featuredProducts={featuredProducts} />
+      </section>
 
-//       <Footer />
-//     </div>
-//   );
-// }
+      <Footer />
+    </div>
+  );
+}
 
 export default WelcomePage;
