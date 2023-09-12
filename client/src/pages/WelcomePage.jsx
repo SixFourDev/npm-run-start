@@ -1,9 +1,7 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FeaturedProductGrid from '../components/FeaturedProductGrid';
-import { GET_FEATURED_PRODUCTS } from './path/to/GET_FEATURED_PRODUCTS';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import FeaturedProductGrid from "../components/FeaturedProductGrid";
+import { GET_FEATURED_PRODUCTS } from "./path/to/GET_FEATURED_PRODUCTS";
 
 function WelcomePage() {
   const { loading, error, data } = useQuery(GET_FEATURED_PRODUCTS);
@@ -15,8 +13,6 @@ function WelcomePage() {
 
   return (
     <div className="welcome-page">
-      <Header />
-
       {/* Featured Shoe Products Section */}
       <section className="featured-products">
         <h2>Featured Shoe Products</h2>
@@ -24,8 +20,6 @@ function WelcomePage() {
         {/* Use the FeaturedProductGrid component */}
         <FeaturedProductGrid featuredProducts={featuredProducts} />
       </section>
-
-      <Footer />
     </div>
   );
 }
