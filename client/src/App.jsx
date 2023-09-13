@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { Header } from '../src/components/Header';
+import { Footer } from '../src/components/Footer';
 import { Outlet } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { BrowserRouter as Router } from 'react-router-dom';
