@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // If we use bootstrap for our signup form, uncomment next line. bootstrap classNames are already applied below.
-// import { Form, Button, Alert } from "react-bootstrap";
+import { Form, Button, Alert } from "react-bootstrap";
 
 import { useMutation } from "@apollo/client";
 
