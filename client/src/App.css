@@ -1,0 +1,53 @@
+.popular-sneakers-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    }
+    
+/* Style the Popular Sneakers section */
+    .popular-sneakers {
+    text-align: center;
+    margin-top: 25px;
+    }
+/* Style each sneaker card */
+    .sneaker-card {
+    display: inline-block;
+    text-align: center;
+    padding: 150px;
+    margin: 50px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    }
+    /* Style the sneaker image */
+    .sneaker-image img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    }
+    /* Style the Sneaker Name */
+    .sneaker-card h3 {
+    margin-top: 50px;
+    }
+    /* Button container for Welcome Page */
+    .button-container {
+    margin-top: 40px;
+    }
+    /* View Shoe and Add to Cart buttons */
+    .view-button,
+    .add-to-cart-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    }
+    /* Hover effect for buttons */
+    .view-button:hover,
+    .add-to-cart-button:hover {
+    background-color: #0056b3;
+    }
