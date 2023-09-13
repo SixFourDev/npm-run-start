@@ -1,7 +1,6 @@
-const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError } = require('@apollo/server');
 const { User, Order, Product } = require('../models');
 const { signToken } = require('../utils/auth');
-
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
@@ -48,5 +47,4 @@ const resolvers = {
     }
   }
 };
-
 module.exports = resolvers;
