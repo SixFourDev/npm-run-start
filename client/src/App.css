@@ -1,36 +1,36 @@
 /* Style the Popular Sneakers section */
 .popular-sneakers {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 55px;
     }
     /* Style each sneaker card */
-    .sneaker-card {
+.sneaker-card {
     display: inline-block;
     text-align: center;
-    padding: 150px;
-    margin: 50px;
+    padding: 10px;
+    margin: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     }
     /* Style the sneaker image */
-    .sneaker-image img {
-    max-width: 100%;
+.sneaker-image img {
+    max-width: 50%;
     display: block;
-    margin: 0 auto;
+    margin: 50px auto;
     }
     /* Style the Sneaker Name */
-    .sneaker-card h3 {
+.sneaker-card h3 {
     margin-top: 50px;
     }
     /* Button container for Welcome Page */
-    .button-container {
+.button-container {
     margin-top: 40px;
     }
     /* View Shoe and Add to Cart buttons */
-    .view-button,
-    .add-to-cart-button {
+.view-button,
+.add-to-cart-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -41,21 +41,21 @@
     transition: background-color 0.3s ease;
     }
     /* Hover effect for buttons */
-    .view-button:hover,
-    .add-to-cart-button:hover {
+.view-button:hover,
+.add-to-cart-button:hover {
     background-color: #0056b3;
     }
     
     /* Style the Search Bar Section */
-    .search-bar {
+.search-bar {
     text-align: center;
     margin-top: 25px;
     }
     
     /* Style the search input */
-    .search-input input {
+.search-input input {
     width: 100%;
-    max-width: 400px; /* Adjust the width as needed */
+    max-width: 400px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -63,7 +63,7 @@
     }
     
     /* Style the search button */
-    .search-button {
+.search-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -75,6 +75,65 @@
     }
     
     /* Hover effect for the search button */
-    .search-button:hover {
+.search-button:hover {
     background-color: #0056b3;
+    }
+
+    /* Search Input Section Styles */
+.search-input {
+    text-align: center;
+    padding: 20px;
+    }
+    
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    }
+    
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+    
+    /* Shoe Grid Styles */
+.shoe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    }
+    
+.shoe-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+    }
+    
+.shoe-container img {
+    max-width: 100%;
+    height: auto;
+    }
+    
+    /* Add to Cart and View Shoe Button Styles */
+.add-to-cart-button,
+.view-shoe-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
     }
