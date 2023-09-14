@@ -1,9 +1,131 @@
+/* Site-wide styles */
+:root {
+    --black: #000000;
+    --darkest-blue: #022a51;
+    --dark-blue: #476f95;
+    --blue: #7593af;
+    --lighter-blue: #a3b7ca;
+    --lightest-blue: #d1dbe4;
+    --white: #ffffff;
+    padding: 0px;
+}
+
+h3 {
+    font-size: 20px;
+
+}
+
+h5 {
+    font-size: 15px;
+}
+
+/* Header styles... */
+header {
+    background-color: var(--darkest-blue);
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#header-logo {
+    background-color: var(--lighter-blue);
+    max-width: 30%;
+    flex-grow: 0;
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--white);
+}
+
+h2 {
+    color: var(--dark-blue);
+}
+
+h2 span {
+    color: var(--black)
+}
+
+/* Nav styles...*/
+.active {
+    font-weight: bold;
+}
+
+#nav {
+    background-color: #0056b3;
+    flex-grow: 1;
+}
+
+/* Nav "Hamburger" styles...*/
+
+.navbar-toggler {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon-bar {
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  display: auto;
+  margin: 6px auto;
+  transition: all 0.3s;
+}
+
+.navbar-toggler.active .icon-bar:nth-child(2) {
+  transform: rotate(-20deg);
+}
+
+.navbar-toggler.active .icon-bar:nth-child(3) {
+  transform: rotate(20deg);
+}
+
+.navbar-toggler.active .icon-bar:nth-child(2),
+.navbar-toggler.active .icon-bar:nth-child(3) {
+  margin-top: 0;
+}
+
+/* Add styles for the mobile menu */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--darkest-blue);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav-links.open {
+    max-height: 500px; /* Adjust the max height as needed */
+  }
+  
+  .nav-links li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+/* Body styles... */
+body { background-color: var(--dark-blue);
+    margin: 0px;
+}
+
 /* Style the Popular Sneakers section */
 .popular-sneakers {
     text-align: center;
     margin-top: 25px;
-    }
-    /* Style each sneaker card */
+ }
+
+/* Style each sneaker card */
     .sneaker-card {
     display: inline-block;
     text-align: center;
@@ -13,22 +135,26 @@
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    }
-    /* Style the sneaker image */
+}
+
+/* Style the sneaker image */
     .sneaker-image img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
-    }
-    /* Style the Sneaker Name */
+}
+
+/* Style the Sneaker Name */
     .sneaker-card h3 {
     margin-top: 50px;
-    }
-    /* Button container for Welcome Page */
+}
+
+/* Button container for Welcome Page */
     .button-container {
     margin-top: 40px;
-    }
-    /* View Shoe and Add to Cart buttons */
+}
+
+/* View Shoe and Add to Cart buttons */
     .view-button,
     .add-to-cart-button {
     background-color: #007bff;
@@ -39,20 +165,21 @@
     cursor: pointer;
     margin: 5px;
     transition: background-color 0.3s ease;
-    }
-    /* Hover effect for buttons */
+}
+
+/* Hover effect for buttons */
     .view-button:hover,
     .add-to-cart-button:hover {
     background-color: #0056b3;
-    }
+}
     
-    /* Style the Search Bar Section */
+/* Style the Search Bar Section */
     .search-bar {
     text-align: center;
     margin-top: 25px;
-    }
+}
     
-    /* Style the search input */
+/* Style the search input */
     .search-input input {
     width: 100%;
     max-width: 400px; /* Adjust the width as needed */
@@ -60,9 +187,9 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    }
+}
     
-    /* Style the search button */
+/* Style the search button */
     .search-button {
     background-color: #007bff;
     color: #fff;
@@ -72,9 +199,60 @@
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
-    }
+}
     
-    /* Hover effect for the search button */
+/* Hover effect for the search button */
     .search-button:hover {
     background-color: #0056b3;
-    }
+}
+
+/* Header/Footer shared styles...*/
+header, footer {
+    width: 100%;
+}
+
+/* Footer styles... */
+footer {
+    display: flex;
+    background-color: var(--lightest-blue);
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-logo {
+    background-color: var(--white);
+    width: 20%;
+}
+
+.contributors-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.name-row {
+    justify-content: center;
+    align-items: center;
+}
+
+.name-row h5 {
+    padding: 10px;
+    color: var(--black);
+    
+}
+
+#contributors, #contact-us {
+    text-align: center;
+    width: 40%;
+}
+
+#contributors h3 {
+color: red;
+}
+
+#contact-us h5 {
+    color: var(--darkest-blue);
+}
