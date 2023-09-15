@@ -1,8 +1,12 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppNavbar from './NavBar';
 
 //Do we need to import useState from 'react'?
-import SignupForm from './SignupForm';
-import LoginForm from './LoginForm';
+// import SignupForm from './SignupForm';
+// import LoginForm from './LoginForm';
+
+import Auth from '../utils/auth';
 
 import "../App.css";
 
@@ -11,17 +15,19 @@ import "../App.css";
 export default function Header() {
     return (
         <header>
-            <div id="header-logo"></div>
-            
-            <h1>NPM Run Start</h1>
+            <div id="header-logo">
+                <h1>NPM</h1>
+                <div id="slogan">
+                <h2>Your Best <span>Run Start</span>s Here!</h2>
+            </div>
+            </div>
 
-            <h2>(Company slogan?)</h2>
 
             <div id="nav">
                 <AppNavbar />
-                <SignupForm />
-                <LoginForm />
             </div>
+
+            
         </header>
     );
 }

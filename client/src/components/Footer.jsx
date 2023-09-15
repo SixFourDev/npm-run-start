@@ -2,38 +2,46 @@ import "../App.css";
 
 import { Link } from "react-router-dom";
 
-import github from "../../../assets/GitHub.svg";
-import linkedin from "../../../assets/LinkedIn.svg";
+// import github from "../../../assets/GitHub.svg";
+// import linkedin from "../../../assets/LinkedIn.svg";
 
 export default function Footer() {
   return (
     <footer>
       <div id="footer-logo">
-        <h2>NPM Run Start</h2>
+        <h2>NPM Run Start Logo</h2>
       </div>
 
       <div id="contributors">
-        <h3>Connect with the Contributors</h3>
-      </div>
+        <h3>Site Contributors</h3>
+        <div className="contributors-row">
+          <div className="name-row">
+            <h5>Shane Browning</h5>
+          </div>
+          <div className="name-row">
+            <h5>Kevin Lewis</h5>
+          </div>
+        </div>
+        <div className="contributors-row">
+          <div className="name-row">
+            <h5>Newman Porter</h5>
+          </div>
+          <div className="name-row">
+            <h5>Felix Thompson</h5>
+          </div>
+        </div>
 
-      <div className="names">
-        <h5 id="shane">Shane Browning</h5>
-
-        <h5 id="kevin">Kevin Lewis</h5>
-
-        <h5 id="newman">Newman Porter</h5>
-
-        <h5 id="felix">Felix Thompson</h5>
       </div>
 
       {/* If we decide to link to a contact form in footer... */}
-      <div className="contact">
+      <div id="contact-us">
+        <h5>Questions? Comments? Concerns?</h5>
         <Link
           to="Contact"
           className="footer-link"
           alt="Links to the 'Contact' page."
         >
-          <h5>Questions? Comments? Concerns? Click here to contact us.</h5>
+          <h5>Click here to contact us.</h5>
         </Link>
       </div>
     </footer>

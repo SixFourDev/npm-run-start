@@ -1,3 +1,124 @@
+/* Site-wide styles */
+:root {
+    --black: #000000;
+    --darkest-blue: #022a51;
+    --dark-blue: #476f95;
+    --blue: #7593af;
+    --lighter-blue: #a3b7ca;
+    --lightest-blue: #d1dbe4;
+    --white: #ffffff;
+    padding: 0px;
+}
+
+h3 {
+    font-size: 20px;
+
+}
+
+h5 {
+    font-size: 15px;
+}
+
+/* Header styles... */
+header {
+    background-color: var(--darkest-blue);
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#header-logo {
+    background-color: var(--lighter-blue);
+    max-width: 30%;
+    flex-grow: 0;
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--white);
+}
+
+h2 {
+    color: var(--dark-blue);
+}
+
+h2 span {
+    color: var(--black)
+}
+
+/* Nav styles...*/
+.active {
+    font-weight: bold;
+}
+
+#nav {
+    background-color: #0056b3;
+    flex-grow: 1;
+}
+
+/* Nav "Hamburger" styles...*/
+
+.navbar-toggler {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icon-bar {
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  display: auto;
+  margin: 6px auto;
+  transition: all 0.3s;
+}
+
+.navbar-toggler.active .icon-bar:nth-child(2) {
+  transform: rotate(-20deg);
+}
+
+.navbar-toggler.active .icon-bar:nth-child(3) {
+  transform: rotate(20deg);
+}
+
+.navbar-toggler.active .icon-bar:nth-child(2),
+.navbar-toggler.active .icon-bar:nth-child(3) {
+  margin-top: 0;
+}
+
+/* Add styles for the mobile menu */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--darkest-blue);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .nav-links.open {
+    max-height: 500px; /* Adjust the max height as needed */
+  }
+  
+  .nav-links li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+/* Body styles... */
+body { background-color: var(--dark-blue);
+    margin: 0px;
+}
+
 /* Style the Popular Sneakers section */
 .popular-sneakers {
     text-align: center;
@@ -44,13 +165,13 @@
 .view-button:hover,
 .add-to-cart-button:hover {
     background-color: #0056b3;
-    }
+}
     
     /* Style the Search Bar Section */
 .search-bar {
     text-align: center;
     margin-top: 25px;
-    }
+}
     
     /* Style the search input */
 .search-input input {
@@ -60,7 +181,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    }
+}
     
     /* Style the search button */
 .search-button {
@@ -72,7 +193,7 @@
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
-    }
+}
     
     /* Hover effect for the search button */
 .search-button:hover {
