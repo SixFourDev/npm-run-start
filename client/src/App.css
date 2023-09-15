@@ -122,41 +122,36 @@ body { background-color: var(--dark-blue);
 /* Style the Popular Sneakers section */
 .popular-sneakers {
     text-align: center;
-    margin-top: 25px;
- }
-
-/* Style each sneaker card */
-    .sneaker-card {
+    margin-top: 55px;
+    }
+    /* Style each sneaker card */
+.sneaker-card {
     display: inline-block;
     text-align: center;
-    padding: 150px;
-    margin: 50px;
+    padding: 10px;
+    margin: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-}
-
-/* Style the sneaker image */
-    .sneaker-image img {
-    max-width: 100%;
+    }
+    /* Style the sneaker image */
+.sneaker-image img {
+    max-width: 50%;
     display: block;
-    margin: 0 auto;
-}
-
-/* Style the Sneaker Name */
-    .sneaker-card h3 {
+    margin: 50px auto;
+    }
+    /* Style the Sneaker Name */
+.sneaker-card h3 {
     margin-top: 50px;
-}
-
-/* Button container for Welcome Page */
-    .button-container {
+    }
+    /* Button container for Welcome Page */
+.button-container {
     margin-top: 40px;
-}
-
-/* View Shoe and Add to Cart buttons */
-    .view-button,
-    .add-to-cart-button {
+    }
+    /* View Shoe and Add to Cart buttons */
+.view-button,
+.add-to-cart-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -165,32 +160,31 @@ body { background-color: var(--dark-blue);
     cursor: pointer;
     margin: 5px;
     transition: background-color 0.3s ease;
-}
-
-/* Hover effect for buttons */
-    .view-button:hover,
-    .add-to-cart-button:hover {
+    }
+    /* Hover effect for buttons */
+.view-button:hover,
+.add-to-cart-button:hover {
     background-color: #0056b3;
 }
     
-/* Style the Search Bar Section */
-    .search-bar {
+    /* Style the Search Bar Section */
+.search-bar {
     text-align: center;
     margin-top: 25px;
 }
     
-/* Style the search input */
-    .search-input input {
+    /* Style the search input */
+.search-input input {
     width: 100%;
-    max-width: 400px; /* Adjust the width as needed */
+    max-width: 400px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
 }
     
-/* Style the search button */
-    .search-button {
+    /* Style the search button */
+.search-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -201,58 +195,66 @@ body { background-color: var(--dark-blue);
     transition: background-color 0.3s ease;
 }
     
-/* Hover effect for the search button */
-    .search-button:hover {
+    /* Hover effect for the search button */
+.search-button:hover {
     background-color: #0056b3;
-}
+    }
 
-/* Header/Footer shared styles...*/
-header, footer {
-    width: 100%;
-}
-
-/* Footer styles... */
-footer {
-    display: flex;
-    background-color: var(--lightest-blue);
-    align-items: center;
-    justify-content: center;
-}
-
-#footer-logo {
-    background-color: var(--white);
-    width: 20%;
-}
-
-.contributors-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.name-row {
-    justify-content: center;
-    align-items: center;
-}
-
-.name-row h5 {
-    padding: 10px;
-    color: var(--black);
-    
-}
-
-#contributors, #contact-us {
+    /* Search Input Section Styles */
+.search-input {
     text-align: center;
-    width: 40%;
-}
-
-#contributors h3 {
-color: red;
-}
-
-#contact-us h5 {
-    color: var(--darkest-blue);
-}
+    padding: 20px;
+    }
+    
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    }
+    
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+    
+    /* Shoe Grid Styles */
+.shoe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    }
+    
+.shoe-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+    }
+    
+.shoe-container img {
+    max-width: 100%;
+    height: auto;
+    }
+    
+    /* Add to Cart and View Shoe Button Styles */
+.add-to-cart-button,
+.view-shoe-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
