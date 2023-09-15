@@ -34,7 +34,7 @@ dbConnection.once('open', async () => {
 
     await server.start();
 
-    server.applyMiddleware({ app });  // Here, we're using the applyMiddleware function
+    server.applyMiddleware({ app });  
 
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(path.join(__dirname, '../client')));
