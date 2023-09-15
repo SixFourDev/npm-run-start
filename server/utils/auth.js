@@ -40,7 +40,7 @@ async function authenticateUser(email, password) {
         throw new Error('Invalid Email or Password');
     }
 
-    const token = signToken(user);
+    const token = signToken(user); 
     return token;
 }
 
