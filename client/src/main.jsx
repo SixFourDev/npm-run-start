@@ -5,6 +5,8 @@ import App from './App.jsx';
 import WelcomePage from './pages/WelcomePage';
 import SearchResults from './pages/SearchResults';
 import ShoeDetails from './pages/ShoeDetails';
+import Login from './components/LoginForm';
+import Signup from './components/SignupForm';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
         path: '/shoe/:id',
         element: <ShoeDetails />
       }, 
+      {
+        path: '/signup',
+        element: <Signup />
+      }, 
+      {
+        path: '/login',
+        element: <Login />
+      },
     ],
   },
 ]);
