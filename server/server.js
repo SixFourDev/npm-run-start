@@ -1,8 +1,8 @@
 const express = require('express');
-const { ApolloServer } = require('apollo-server-express');  // Note the change here
+const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const cors = require('cors');
-const auth = require('./utils/auth');
+const { decodeToken } = require('./utils/auth.js');  // Update this import
 const { typeDefs, resolvers } = require('./schemas');
 const dbConnection = require('./config/connection');
 
@@ -20,7 +20,7 @@ const server = new ApolloServer({
     resolvers,
     context: ({ req }) => {
         const token = req.headers.authorization || '';
-        const user = auth(token);
+        const user = decodeToken(token); 
         return { user };
     }
 });
