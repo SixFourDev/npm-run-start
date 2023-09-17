@@ -5,6 +5,7 @@ const cors = require('cors');
 const { decodeToken } = require('./utils/auth.js');  // Update this import
 const { typeDefs, resolvers } = require('./schemas');
 const dbConnection = require('./config/connection');
+const stripe = require('./utils/stripe.js');
 
 require('dotenv').config();
 
