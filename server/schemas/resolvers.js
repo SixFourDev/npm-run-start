@@ -44,6 +44,20 @@ const resolvers = {
         return order;
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    createPaymentIntent: async (_, { amount, currency }) => {
+      try {
+        //stripe object
+        const paymentIntent = await stripeKey.paymentIntents.create({
+          amount,
+          currency,
+        });
+
+        return paymentIntent;
+      } catch (error) {
+        //handle errors 
+        throw new Error(`Payment intent creation failed: ${error.message}`)
+      }
     }
   }
 };

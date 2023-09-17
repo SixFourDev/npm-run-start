@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const User = require('../models/User.js');
+const User = require('../models/User');
 
 const secretKey = process.env.JWT_SECRET; // Ensure the .env file has this variable
 
@@ -40,7 +40,7 @@ async function authenticateUser(email, password) {
         throw new Error('Invalid Email or Password');
     }
 
-    const token = signToken(user);
+    const token = signToken(user); 
     return token;
 }
 
