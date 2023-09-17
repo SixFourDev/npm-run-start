@@ -37,6 +37,12 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
   }
+  type Mutation {
+    createPaymentIntent(amount: Float!, currency: String!): PaymentIntent
+  }
+  type PaymentIntent {
+    id: ID!
+  }
 `;
 
 module.exports = typeDefs;
