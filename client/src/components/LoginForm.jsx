@@ -1,19 +1,10 @@
-//This code was pulled from the "MERN Book Search" challenge and is a placeholder. It should be reviewed in detail.
-
 import { useState } from "react";
-
-// If we use bootstrap for our signup form, uncomment next line. bootstrap classNames are already applied below.
-import { Form, Button, Alert } from "react-bootstrap";
-
 import { useMutation } from "@apollo/client";
-
 import { LOGIN_USER } from "../utils/mutations";
-
 import Auth from "../utils/auth";
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
-  const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -25,12 +16,6 @@ const LoginForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
 
     try {
       const { data } = await login({
@@ -56,55 +41,84 @@ const LoginForm = () => {
     });
   };
 
-  return (
-    <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        <Alert
-          dismissible
-          onClose={() => setShowAlert(false)}
-          show={showAlert}
-          variant="danger"
-        >
-          Something went wrong with your login credentials!
-        </Alert>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="email">Email</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Your email"
-            name="email"
-            onChange={handleInputChange}
-            value={userFormData.email}
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Email is required!
-          </Form.Control.Feedback>
-        </Form.Group>
+  // Define inline styles
+  const containerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+  };
 
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="password">Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Your password"
-            name="password"
-            onChange={handleInputChange}
-            value={userFormData.password}
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Password is required!
-          </Form.Control.Feedback>
-        </Form.Group>
-        <Button
-          disabled={!(userFormData.email && userFormData.password)}
-          type="submit"
-          variant="success"
-        >
-          Submit
-        </Button>
-      </Form>
-    </>
+  const formStyle = {
+    width: "300px",
+    padding: "20px",
+    border: "1px solid #ccc",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+  };
+
+  const inputStyle = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "10px",
+  };
+
+  const headingStyle = {
+    fontSize: "24px",
+    marginBottom: "20px",
+  };
+
+  const isFormValid = userFormData.email && userFormData.password;
+
+  return (
+    <div style={containerStyle}>
+      <h2 style={headingStyle}>Login</h2>
+      <div>
+        {showAlert && (
+          <div style={{ color: "red" }}>
+            Something went wrong with your login credentials!
+          </div>
+        )}
+        <form onSubmit={handleFormSubmit} style={formStyle}>
+          <div>
+            <label>Email</label>
+            <input
+              type="text"
+              placeholder="Your email"
+              name="email"
+              onChange={handleInputChange}
+              value={userFormData.email}
+              required
+              style={inputStyle}
+            />
+          </div>
+
+          <div>
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Your password"
+              name="password"
+              onChange={handleInputChange}
+              value={userFormData.password}
+              required
+              style={inputStyle}
+            />
+          </div>
+          <button
+            type="submit"
+            style={{
+              width: "100%",
+              padding: "10px",
+              backgroundColor: isFormValid ? "green" : "gray",
+            }}
+            disabled={!isFormValid}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 
