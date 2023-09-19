@@ -38,22 +38,24 @@ header {
     flex-direction: row;
     align-items: center;
     border-bottom: 3px white solid;
-    @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
+    header { flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    }
+    #header-logo {
         flex-direction: column;
-        justify-content: center;
-        padding-bottom: 50px;
+        width: 40%;
     }
 }
 
 #header-logo {
     margin: 20px;
-    min-width: 15%;
+    min-width: 17%;
     flex-grow: 0;
     flex-shrink: 0;
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
-        width: 50%;
-    }
 }
 
 /* Nav styles...*/
@@ -152,7 +154,7 @@ body { background-color: var(--dark-blue);
 .popular-sneakers {
     text-align: center;
     margin-top: 55px;
-    }
+}
     /* Style each sneaker card */
 .sneaker-card {
     display: inline-block;
@@ -169,15 +171,15 @@ body { background-color: var(--dark-blue);
     max-width: 50%;
     display: block;
     margin: 50px auto;
-    }
+}
     /* Style the Sneaker Name */
 .sneaker-card h3 {
     margin-top: 50px;
-    }
+}
     /* Button container for Welcome Page */
 .button-container {
     margin-top: 40px;
-    }
+}
     /* View Shoe and Add to Cart buttons */
 .view-button,
 .add-to-cart-button {
@@ -277,6 +279,7 @@ button {
 .shoe-container img {
     max-width: 100%;
     height: auto;
+    border: 3px solid var(--darkest-blue);
     }
     
     /* Add to Cart and View Shoe Button Styles */
@@ -310,15 +313,10 @@ footer {
     align-items: center;
     justify-content: center;
     border-top: 3px white solid;
-}
-
-@media screen and (max-width: 600px) {
-    footer { flex-direction: column;
-    justify-content: center;
-    }
-    .name-row {
-        padding: 0px;
-    }
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+        }
 }
 
 h2 {
@@ -351,7 +349,7 @@ h2 {
 
 #contributors, #contact-us {
     text-align: center;
-    width: 40%;
+    width: 50%;
 }
 
 #contributors h3 {
@@ -367,6 +365,7 @@ footer h5 {
 footer a {
     text-decoration: none;
     text-align: center;
+    color:var(--lighter-blue);
 }
 
 h5 span:hover {
@@ -374,5 +373,10 @@ h5 span:hover {
 }
 
 #contact-us {
-    color: white;
+    @media screen and (max-width: 600px) {
+    border-top: 3px var(--dark-blue) solid;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    }
 }

@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
 
       {/* If we decide to link to a contact form in footer... */}
-      <div>
+      <div id="contact-us">
         <h5>Questions? Comments? Concerns?</h5>
         <Link
           to="Contact"
