@@ -58,7 +58,7 @@ const LoginForm = () => {
   };
 
   const inputStyle = {
-    width: "100%",
+    width: "90%",
     padding: "10px",
     marginBottom: "10px",
   };
@@ -108,7 +108,7 @@ const LoginForm = () => {
           <button
             type="submit"
             style={{
-              width: "100%",
+              width: "98%",
               padding: "10px",
               backgroundColor: isFormValid ? "green" : "gray",
             }}
