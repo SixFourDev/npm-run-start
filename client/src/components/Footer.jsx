@@ -8,9 +8,6 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer>
-      <div id="footer-logo">
-        <h2>NPM Run Start Logo</h2>
-      </div>
 
       <div id="contributors">
         <h3>Site Contributors</h3>
@@ -35,13 +32,13 @@ export default function Footer() {
 
       {/* If we decide to link to a contact form in footer... */}
       <div id="contact-us">
-        <h5>Questions? Comments? Concerns?</h5>
+        <h3>Questions? Comments? Concerns?</h3>
         <Link
           to="Contact"
           className="footer-link"
           alt="Links to the 'Contact' page."
         >
-          <h5>Click here to contact us.</h5>
+          <h3><span>Click here to contact us.</span></h3>
         </Link>
       </div>
     </footer>
