@@ -40,6 +40,7 @@ const SignupForm = () => {
     }
 
     try {
+      console.log("hit here")
       const { data } = await addUser({
         variables: {
           username: userFormData.username,
@@ -47,7 +48,7 @@ const SignupForm = () => {
           password: userFormData.password,
         },
       });
-
+      console.log(data);
       if (data && data.addUser) {
         console.log("User data:", data.addUser);
       } else {
