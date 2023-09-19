@@ -11,16 +11,6 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
-    firstName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    lastName: {
-        type: String,
-        required: true,
-        trim: true
-    },
     email: {
         type: String,
         required: true,
@@ -29,7 +19,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true,
-        minLength: 6
+        minLength: 3
     },
     orders: [Order.schema]
 });

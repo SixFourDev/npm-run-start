@@ -23,14 +23,15 @@ const SignupForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await addUser({
+      console.log("hit here")
+      const {data}  = await addUser({
         variables: {
           username: userFormData.username,
           email: userFormData.email,
           password: userFormData.password,
         },
       });
-
+      console.log(data);
       if (data && data.addUser) {
         console.log("User data:", data.addUser);
       } else {
