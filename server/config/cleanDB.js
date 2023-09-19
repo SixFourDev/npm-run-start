@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const models = require('../models');
-const db = require('./connection');
+const db = require('./connection.js');
 
 module.exports = async () => {
     try {
         // Specify the database name and collection names
-        const databaseName = 'test';
+        const databaseName = 'npm-run-start';
         const collectionNames = ['orders', 'users', 'products'];
 
         // Use the specified database name
