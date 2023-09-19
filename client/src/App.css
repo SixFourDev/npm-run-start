@@ -39,7 +39,7 @@ header {
 
 #header-logo {
     margin: 20px;
-    width: 41%;
+    width: 10%;
     flex-grow: 0;
     flex-shrink: 1;
     @media screen and (max-width: 600px) {
@@ -297,7 +297,7 @@ footer {
 }
 
 h2 {
-    color: var(--dark-blue);
+    color: var(--white);
 }
 
 #footer-logo {
