@@ -15,9 +15,16 @@ h3 {
 }
 
 h5 {
-    font-size: 15px;
-    font-family: 'Alata', sans-serif;
+    font-size: 20px;
     color: white;
+}
+
+h2, h3, h5, p {
+    font-family: 'Alata', sans-serif;
+}
+
+p {
+    font-size: 18px;
 }
 
 header, footer {
@@ -41,7 +48,7 @@ header {
     margin: 20px;
     width: 10%;
     flex-grow: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
     @media screen and (max-width: 600px) {
         flex-direction: column;
         width: 50%;
@@ -192,6 +199,7 @@ body { background-color: var(--dark-blue);
 .search-bar {
     text-align: center;
     margin-top: 25px;
+    margin-bottom: 80px;
 }
     
     /* Style the search input */
@@ -262,6 +270,7 @@ button {
     margin: 10px;
     max-width: 300px;
     text-align: center;
+    background-color: var(--lightest-blue);
     }
     
 .shoe-container img {
@@ -334,12 +343,16 @@ h2 {
     color: var(--lightest-blue);
 }
 
-footer h3 {
+footer h5 {
     font-family: 'Alata', sans-serif;
     color: white;
 }
 
-h3 span:hover {
+footer a {
+    text-decoration: none;
+}
+
+h5 span:hover {
     color:var(--lighter-blue);
 }
 
