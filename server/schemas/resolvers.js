@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('@apollo/server');
 const axios = require('axios');
+const stripe = require('../utils/stripe');
 const { User, Order, Product } = require('../models');
 const { signToken } = require('../utils/auth');
 const resolvers = {
@@ -22,8 +23,8 @@ const resolvers = {
     },
     product: async (parent, { productName }) => {
       try {
-        // Make an HTTP GET request to the external API
-        const response = await axios.get(`https://api.example.com/products?name=${productName}`);
+        // replace with relative domain root 
+        const response = await axios.get(`http://localhost:3001/products?name=${productName}`);
 
         // Handle the API response and extract the relevant data
         const productData = response.data;
@@ -66,7 +67,7 @@ const resolvers = {
     createPaymentIntent: async (_, { amount, currency }) => {
       try {
         //stripe object
-        const paymentIntent = await stripeKey.paymentIntents.create({
+        const paymentIntent = await stripe.paymentIntents.create({
           amount,
           currency,
         });
