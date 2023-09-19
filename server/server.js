@@ -3,6 +3,7 @@ require('dotenv').config();
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 const dbConnection = require('./config/connection');
+const path = require('path');
 
 
 const PORT = process.env.PORT || 3001;
@@ -32,6 +33,14 @@ dbConnection.on('error', (error) => {
 // Start the Apollo server middleware directly
 server.start().then(() => {
     server.applyMiddleware({ app });
+
+    if (process.env.NODE_ENV === 'production') {
+        app.use(express.static(path.join(__dirname, '../client/dist')));
+   
+        app.get('*', (req, res) => {
+          res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+        });
+      }
 
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
