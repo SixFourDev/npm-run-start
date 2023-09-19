@@ -31,14 +31,14 @@ export default function Footer() {
       </div>
 
       {/* If we decide to link to a contact form in footer... */}
-      <div id="contact-us">
-        <h3>Questions? Comments? Concerns?</h3>
+      <div>
+        <h5>Questions? Comments? Concerns?</h5>
         <Link
           to="Contact"
           className="footer-link"
           alt="Links to the 'Contact' page."
         >
-          <h3><span>Click here to contact us.</span></h3>
+          <h5><span>Click here to contact us.</span></h5>
         </Link>
       </div>
     </footer>
